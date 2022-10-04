@@ -6,22 +6,18 @@ import (
 )
 
 type Server struct {
-	host    string
-	port    int
-	timeout time.Duration
-	maxConn int
+	Cfg Config
 }
 
-func New(host string, port int) *Server {
-	return &Server{host, port, time.Minute, 100}
+type Config struct {
+	Host    string
+	Port    int
+	Timeout time.Duration
+	MaxConn int
 }
 
-func NewWithTimeout(host string, port int, timeout time.Duration) *Server {
-	return &Server{host: host, port: port, timeout: timeout}
-}
-
-func NewWithTimeoutAndMaxConn(host string, port int, timeout time.Duration, maxConn int) *Server {
-	return &Server{host, port, timeout, maxConn}
+func New(cfg Config) *Server {
+	return &Server{Cfg: cfg}
 }
 
 func (s *Server) Start() error {
