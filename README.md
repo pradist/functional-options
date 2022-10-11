@@ -1,1 +1,1 @@
-# functional
+# functional options
