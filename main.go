@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/pradist/functional/server"
 	"log"
+
+	"github.com/pradist/functional-options/server"
 )
 
 func main() {
