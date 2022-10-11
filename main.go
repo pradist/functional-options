@@ -12,7 +12,6 @@ func main() {
 		Host:    "localhost",
 		Port:    1234,
 		Timeout: 30 * time.Second,
-		MaxConn: 10,
 	})
 
 	if err := svr.Start(); err != nil {

@@ -13,7 +13,6 @@ type Config struct {
 	Host    string
 	Port    int
 	Timeout time.Duration
-	MaxConn int
 }
 
 func New(cfg Config) *Server {
